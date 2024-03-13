@@ -22,7 +22,7 @@ declare -a databases=(
 # Create Database Backups
 for db in ${databases[@]}
 do
-	$mysqldump -u $db_username -p "--password=$db_password" "$db" > "$destination/backup-$date/db-$db.sql"
+    $mysqldump -u $db_username -p "--password=$db_password" "$db" > "$destination/backup-$date/db-$db.sql"
 
     echo "$db" Database Backup Created.
 done
